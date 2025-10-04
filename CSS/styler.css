@@ -1,0 +1,51 @@
+
+/*Tag elemnt*/
+/*h1{
+    background-color:bisque;
+}
+ul{
+    list-style-type:square;}
+
+h2{
+    background-color:black;
+    color:white;
+}
+*/
+/*id base selection*/
+/*#park{
+    background-color:lightblue;
+}
+#ankit1{
+    list-style-type:circle;
+    background-color:lightgreen;
+}*/
+/*class base selection*/
+
+/*.third{
+    background-color:lightgrey;
+    text-align:center;
+}*/
+/*group base selection*/
+/*h1, h2{
+
+    background-color:rgb(206, 161, 14);
+    text-align:center;
+}*/
+/*font*/
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:20px;
+    line-height:1.6;
+}
+/*font*/
+h2{
+    font-family:'Courier New', Courier, monospace;
+    font-size:25px;
+    line-height:1.6;
+}
+ul{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font: size 18px;
+    font: weight 100px;
+    line-height:1.6;
+}
