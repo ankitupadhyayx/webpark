@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCollab - Your Health, Your Control</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styles for dropdown */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-bold text-blue-600">MediCollab</a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-blue-600 transition duration-300">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-300">About</a>
+                    
+                    <!-- Patient Dropdown -->
+                    <div class="relative dropdown">
+                        <button class="text-gray-600 hover:text-blue-600 transition duration-300 focus:outline-none">
+                            Patient
+                            <svg class="w-4 h-4 inline-block ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="dropdown-menu absolute hidden bg-white shadow-lg rounded-md mt-2 w-48 py-2">
+                            <a href="#patient-login" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Login</a>
+                            <a href="#patient-register" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Register</a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor Dropdown -->
+                    <div class="relative dropdown">
+                        <button class="text-gray-600 hover:text-blue-600 transition duration-300 focus:outline-none">
+                            Doctor/Hospital
+                             <svg class="w-4 h-4 inline-block ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="dropdown-menu absolute hidden bg-white shadow-lg rounded-md mt-2 w-48 py-2">
+                            <a href="#doctor-login" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Login</a>
+                            <a href="#doctor-register" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Register</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <a href="#home" class="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50">Home</a>
+                <a href="#about" class="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50">About</a>
+                <h3 class="px-4 pt-4 pb-2 text-xs text-gray-500 uppercase font-semibold">Patient</h3>
+                <a href="#patient-login" class="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50">Login</a>
+                <a href="#patient-register" class="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50">Register</a>
+                 <h3 class="px-4 pt-4 pb-2 text-xs text-gray-500 uppercase font-semibold">Doctor/Hospital</h3>
+                <a href="#doctor-login" class="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50">Login</a>
+                <a href="#doctor-register" class="block py-2 px-4 text-sm text-gray-600 hover:bg-blue-50">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="pt-24 md:pt-32 bg-blue-600 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Your Health Records, Finally in Your Hands.</h1>
+                    <p class="text-lg md:text-xl text-blue-100 mb-8">MediCollab creates a transparent, patient-approved digital health timeline. Securely store and access your medical history anytime, anywhere, across all hospitals.</p>
+                    <a href="#about" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-full hover:bg-blue-100 transition duration-300">Learn More</a>
+                </div>
+                 <div class="mt-12">
+                     <img src="https://placehold.co/1200x600/FFFFFF/3B82F6?text=MediCollab+Dashboard" alt="MediCollab Dashboard Illustration" class="mx-auto rounded-t-lg shadow-2xl">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Why MediCollab?</h2>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">We are solving the biggest problems in healthcare record management by giving you full ownership and transparency.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <div class="text-blue-600 mb-4">
+                             <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Patient-Centric Control</h3>
+                        <p class="text-gray-600">You approve every record. Nothing gets added to your permanent health timeline without your consent, ensuring accuracy and transparency.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                         <div class="text-blue-600 mb-4">
+                           <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3m-3.516 3.858l-2.122 2.122m0 0l-2.122 2.122m2.122-2.122l2.122-2.122m-2.122 2.122l-2.122-2.122"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Works Everywhere</h3>
+                        <p class="text-gray-600">Your digital health timeline is portable. It works across different hospitals, cities, and even countries, ending data fragmentation for good.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <div class="text-blue-600 mb-4">
+                           <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Emergency Ready</h3>
+                        <p class="text-gray-600">With your permission, doctors can instantly access your verified medical history in an emergency, enabling faster and safer treatment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Information for Patients & Doctors -->
+        <section class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Patient Info -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">For Patients</h2>
+                        <p class="text-gray-600 mb-6">Take control of your health journey. Build a secure, lifelong digital record of every prescription, report, and bill. Share your history with new doctors in a single click and never worry about losing a paper record again.</p>
+                        <ul class="space-y-4 text-gray-700">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Build your permanent Health Timeline.</span>
+                            </li>
+                            <li class="flex items-start">
+                               <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Approve or reject hospital uploads.</span>
+                            </li>
+                             <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Get smart reminders for appointments.</span>
+                            </li>
+                        </ul>
+                    </div>
+                     <!-- Doctor Info -->
+                    <div>
+                         <h2 class="text-3xl font-bold text-gray-800 mb-4">For Doctors & Hospitals</h2>
+                        <p class="text-gray-600 mb-6">Collaborate with your patients transparently. Reduce paperwork, build trust, and gain instant access to a new patient's verified medical history (with their consent). Our platform simplifies record-keeping and improves quality of care.</p>
+                         <ul class="space-y-4 text-gray-700">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Upload records directly to patient profiles.</span>
+                            </li>
+                            <li class="flex items-start">
+                               <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Receive patient approval for data accuracy.</span>
+                            </li>
+                             <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Access complete patient history with one click.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 MediCollab. All rights reserved.</p>
+            <p class="text-sm text-gray-400 mt-2">A Final Year Major Project.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Simple click handlers for demo purposes
+        // In a real app, these would link to actual login/register pages or modals
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                // Prevent default for nav links to avoid hash in URL
+                const href = this.getAttribute('href');
+                if (href.length > 1 && document.querySelector(href)) {
+                     e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
